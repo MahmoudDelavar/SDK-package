@@ -1,4 +1,4 @@
-declare const createClient: () => {
+declare const createClient: (baseURL: string) => {
     userServices: {
         get: ({ id }: UserTypes.GetVariables) => Promise<UserTypes.UserModel>;
     };
@@ -28,4 +28,4 @@ declare namespace UserTypes {
     };
 }
 
-export { UserTypes, createClient };
+export { Identifiers, UserTypes, createClient };

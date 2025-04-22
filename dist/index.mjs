@@ -14,21 +14,21 @@ var mappers = {
 };
 
 // src/services/user/user.services.ts
-var createUserServices = (client2) => ({
+var createUserServices = (client) => ({
   get: async ({ id }) => {
-    const response = await client2.get(`/users/${id}`);
+    const response = await client.get(`/users/${id}`);
     return mappers.get(response.data);
   }
 });
 
 // src/client/client.ts
-var client = axios.create({
-  baseURL: process.env.BASE_URL,
-  headers: {
-    "Content-Type": "application/json"
-  }
-});
-var createClient = () => {
+var createClient = (baseURL) => {
+  const client = axios.create({
+    baseURL,
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
   return {
     userServices: createUserServices(client)
   };
