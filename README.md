@@ -1,6 +1,6 @@
 # mdp-sdk-package
 
-A TypeScript-based SDK for interacting with REST APIs using Axios. The package is designed with DTOs, Mappers, and Branded Types to ensure type safety and a modular architecture.
+This TypeScript-based SDK simplifies API integrations, allowing seamless interaction with REST APIs using Axios. Designed with type safety in mind, it leverages DTOs, Mappers, and Branded Types to ensure a modular architecture and robust data handling. The package provides a streamlined approach to making HTTP requests (GET, POST, PUT, DELETE), offering a clean and efficient interface layer between your application and the API.
 
 ## ✨ Features
 
